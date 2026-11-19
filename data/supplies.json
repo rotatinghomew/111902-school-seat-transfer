@@ -1,0 +1,218 @@
+{
+  "synthetic": true,
+  "tables": {
+    "intents": [
+      {
+        "intent": "I1",
+        "child": "C1",
+        "family_group": "F1",
+        "grade": 1,
+        "school_year": 2027,
+        "recorded": "2026-11-12",
+        "desired": "甲校"
+      },
+      {
+        "intent": "I2",
+        "child": "C1",
+        "family_group": "F1",
+        "grade": 1,
+        "school_year": 2027,
+        "recorded": "2026-11-13",
+        "desired": "乙校"
+      },
+      {
+        "intent": "I3",
+        "child": "C2",
+        "family_group": "F1",
+        "grade": 3,
+        "school_year": 2027,
+        "recorded": "2026-11-12",
+        "desired": "乙校"
+      },
+      {
+        "intent": "I4",
+        "child": "C3",
+        "family_group": null,
+        "grade": 3,
+        "school_year": 2027,
+        "recorded": "2026-11-08",
+        "desired": "甲校"
+      },
+      {
+        "intent": "I5",
+        "child": "C4",
+        "family_group": null,
+        "grade": 1,
+        "school_year": 2027,
+        "recorded": "2026-11-12",
+        "desired": "丙校"
+      },
+      {
+        "intent": "H1",
+        "child": "C5",
+        "family_group": "F2",
+        "grade": 1,
+        "school_year": 2026,
+        "recorded": "2025-11-12",
+        "desired": "甲校"
+      },
+      {
+        "intent": "H2",
+        "child": "C6",
+        "family_group": "F2",
+        "grade": 3,
+        "school_year": 2026,
+        "recorded": "2025-11-12",
+        "desired": "甲校"
+      }
+    ],
+    "address_evidence": [
+      {
+        "evidence": "A1",
+        "who": "F1",
+        "recorded": "2026-11-12",
+        "state": "候选",
+        "eligible": [
+          "甲校",
+          "乙校"
+        ],
+        "exception": false
+      },
+      {
+        "evidence": "A2",
+        "who": "F1",
+        "recorded": "2026-11-20",
+        "state": "核验",
+        "eligible": [
+          "乙校"
+        ],
+        "exception": false
+      },
+      {
+        "evidence": "A3",
+        "who": "C3",
+        "recorded": "2026-11-08",
+        "state": "核验",
+        "eligible": [
+          "甲校"
+        ],
+        "exception": false
+      },
+      {
+        "evidence": "A4",
+        "who": "C4",
+        "recorded": "2026-11-12",
+        "state": "材料缺失",
+        "eligible": [],
+        "exception": false
+      },
+      {
+        "evidence": "A5",
+        "who": "F2",
+        "recorded": "2025-11-14",
+        "state": "候选",
+        "eligible": [
+          "甲校",
+          "乙校"
+        ],
+        "exception": false
+      },
+      {
+        "evidence": "A6",
+        "who": "F2",
+        "recorded": "2025-12-12",
+        "state": "核验",
+        "eligible": [
+          "甲校"
+        ],
+        "exception": false
+      }
+    ],
+    "limits": [
+      {
+        "campus": "甲校",
+        "grade": 1,
+        "rooms": 2,
+        "teachers": 2,
+        "class_capacity": 4,
+        "continuing": 7
+      },
+      {
+        "campus": "甲校",
+        "grade": 3,
+        "rooms": 2,
+        "teachers": 2,
+        "class_capacity": 4,
+        "continuing": 6
+      },
+      {
+        "campus": "乙校",
+        "grade": 1,
+        "rooms": 2,
+        "teachers": 2,
+        "class_capacity": 4,
+        "continuing": 7
+      },
+      {
+        "campus": "乙校",
+        "grade": 3,
+        "rooms": 1,
+        "teachers": 1,
+        "class_capacity": 4,
+        "continuing": 4
+      },
+      {
+        "campus": "丙校",
+        "grade": 3,
+        "rooms": 2,
+        "teachers": 2,
+        "class_capacity": 4,
+        "continuing": 3
+      }
+    ],
+    "placement_results": [
+      {
+        "child": "C5",
+        "campus": "甲校",
+        "school_year": 2026,
+        "recorded": "2026-02-01"
+      },
+      {
+        "child": "C6",
+        "campus": "甲校",
+        "school_year": 2026,
+        "recorded": "2026-02-01"
+      }
+    ],
+    "promises": [
+      {
+        "promise": "P1",
+        "child": "C3",
+        "campus": "甲校",
+        "grade": 3,
+        "state": "已确认",
+        "at": "2026-11-16"
+      }
+    ],
+    "transactions": [
+      {
+        "transfer": "X1",
+        "campus_from": "丙校",
+        "campus_to": "乙校",
+        "grade": 3,
+        "classes": 1,
+        "state": "申请",
+        "at": "2026-11-18"
+      },
+      {
+        "transfer": "X1",
+        "campus_from": "丙校",
+        "campus_to": "乙校",
+        "grade": 3,
+        "classes": 1,
+        "state": "确认",
+        "at": "2026-11-21"
+      }
+    ]
+  }
+}

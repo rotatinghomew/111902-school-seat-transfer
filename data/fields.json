@@ -1,0 +1,123 @@
+{
+  "intents": {
+    "intent": [
+      "str"
+    ],
+    "child": [
+      "str"
+    ],
+    "family_group": [
+      "NoneType",
+      "str"
+    ],
+    "grade": [
+      "int"
+    ],
+    "school_year": [
+      "int"
+    ],
+    "recorded": [
+      "str"
+    ],
+    "desired": [
+      "str"
+    ]
+  },
+  "address_evidence": {
+    "evidence": [
+      "str"
+    ],
+    "who": [
+      "str"
+    ],
+    "recorded": [
+      "str"
+    ],
+    "state": [
+      "str"
+    ],
+    "eligible": [
+      "list"
+    ],
+    "exception": [
+      "bool"
+    ]
+  },
+  "limits": {
+    "campus": [
+      "str"
+    ],
+    "grade": [
+      "int"
+    ],
+    "rooms": [
+      "int"
+    ],
+    "teachers": [
+      "int"
+    ],
+    "class_capacity": [
+      "int"
+    ],
+    "continuing": [
+      "int"
+    ]
+  },
+  "placement_results": {
+    "child": [
+      "str"
+    ],
+    "campus": [
+      "str"
+    ],
+    "school_year": [
+      "int"
+    ],
+    "recorded": [
+      "str"
+    ]
+  },
+  "promises": {
+    "promise": [
+      "str"
+    ],
+    "child": [
+      "str"
+    ],
+    "campus": [
+      "str"
+    ],
+    "grade": [
+      "int"
+    ],
+    "state": [
+      "str"
+    ],
+    "at": [
+      "str"
+    ]
+  },
+  "transactions": {
+    "transfer": [
+      "str"
+    ],
+    "campus_from": [
+      "str"
+    ],
+    "campus_to": [
+      "str"
+    ],
+    "grade": [
+      "int"
+    ],
+    "classes": [
+      "int"
+    ],
+    "state": [
+      "str"
+    ],
+    "at": [
+      "str"
+    ]
+  }
+}
