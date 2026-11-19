@@ -1,14 +1,7 @@
-# 随迁入学
+# 随迁入学规划资料
 
-本地合成业务资料。人名标识、去向、机构和观测均为虚构，不接入外部系统。
+本地合成业务资料，不含真实儿童或学校信息。仓库包含住宅分期、逐次进度、历史交付与入学结果、家庭登记、在校生、校区资源、调拨意向及签认记录。
 
-## 输入约定
+`data/supplies.json` 按业务表保存记录，`data/fields.json` 记录各表字段及资料中出现的值类型。`phases` 标识分期及可能接收的校区；`progress` 按记录接收时间保留分期消息，`history` 分开记录交付、入住和首次入学结果。`families` 与 `applicants` 关联家庭选择和儿童，`continuing` 记录已在校的升班占用。`resource_calendar` 按校区、学段、时段及学年记录教师与教室；`loan_offers` 和 `loan_events` 保存调拨意向及其签认或撤回，`confirmations` 保存接收确认。
 
-`data/supplies.json` 以表名组织记录；`data/fields.json` 列出字段及该资料出现的值类型。
-
-`intents` 里同一个 `child` 可能有多条登记，不等于多个学位。`address_evidence` 按核验时点生效；候选地址未确认时保留地址能导出的整体校区选择，已核验地址取其可接收校区。`family_group` 非空的孩子须同时到同一校区，除非有 `exception=true` 的有效地址核验。对于历史批次，`recorded` 是窗口可知时间，`placement_results` 才是结果，不能混入前期材料。`limits` 中每个校区年级的可教学上限受师资和教室同时约束，`continuing` 为不可调出的续读占用；教室规格在 `class_capacity` 定义，整数班。接受调拨改变接收校和调出校的班资源，不能跨年级使用。
-只有状态为「已确认」的空位承诺占用额度；未签收的调拨不计，校方确认时间以 `transactions.at` 为准。对于证据不足的地址，应公开待核而非猜测校区。表内只含学位规划资料和拟制校区，不提供真实儿童资料。
-
-## 资料检查
-
-在 Linux 上使用 Python 3.11 及标准库，无需安装第三方包。运行 `python3 -m unittest discover -s tests -v` 检查表字段、类型和关键关联。当前仓库只包含业务来源资料及检查，尚无分析结果或业务操作入口。
+使用 Linux、Python 3.11 及标准库运行 `python3 -m unittest discover -s tests -v`，检查数据字段、类型和关键关联。资料仓库不包含预测或调拨办理入口。

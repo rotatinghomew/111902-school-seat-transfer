@@ -33,8 +33,11 @@ class SourceContract(unittest.TestCase):
                     self.assertIn(type(row[field]).__name__, accepted, (table, field))
 
     def test_source_relationships(self):
-        self.references('promises', 'child', 'intents', 'child')
-        self.references('transactions', 'campus_from', 'limits', 'campus')
-        self.references('transactions', 'campus_to', 'limits', 'campus')
-        self.assertEqual(len({row['transfer'] for row in self.rows('transactions')}), 1)
-        self.assertTrue(any(not row['eligible'] for row in self.rows('address_evidence')))
+        self.references('progress', 'phase', 'phases', 'phase')
+        self.references('history', 'phase', 'phases', 'phase')
+        self.references('families', 'phase', 'phases', 'phase')
+        self.references('applicants', 'family', 'families', 'family')
+        self.references('loan_events', 'offer', 'loan_offers', 'offer')
+        self.assertGreater(len(self.rows('history')), 200)
+        self.assertTrue(any(len(row['resources']) == 2 for row in self.rows('loan_offers')))
+        self.assertTrue(any(row['milestone'] == '分批' for row in self.rows('progress')))
